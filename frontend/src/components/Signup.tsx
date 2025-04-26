@@ -15,7 +15,7 @@ const Signup = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/signup", form);
+      const res = await axios.post("https://finance-tracker-l46a.onrender.com/signup", form);
       setMessage(res.data.message);
       // Redirect to login page after successful sign-up
       navigate("/login");
