@@ -26,7 +26,7 @@ const Finance: React.FC<FinanceProps> = ({ isLoggedIn, username }) => {
     const fetchUserData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/finance/${username}`);
+        const res = await axios.get(`https://finance-tracker-l46a.onrender.com/finance/${username}`);
         const records = res.data;
         const todayRecord = records.find((r: any) => r.date === today);
         const incomeEntry = records[0]?.income ?? 0;
