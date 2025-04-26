@@ -20,7 +20,7 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn, setUsername }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", form);
+      const res = await axios.post("https://finance-tracker-l46a.onrender.com/login", form);
       setMessage(res.data.message);
       setIsLoggedIn(true);
       setUsername(form.email);
